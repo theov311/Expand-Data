@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import dayjs from 'dayjs';
+
 // La ligne suivante a été commentée et remplacée pour résoudre l'erreur de compilation.
 // import Papa from 'papaparse';
 // Au lieu de cela, nous supposons que PapaParse est chargé globalement via une balise <script> dans le HTML,
 // par exemple: <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 // Ensuite, nous y accédons via window.Papa
 const Papa = window.Papa;
-
-import { v4 as uuidv4 } from 'uuid';
-import dayjs from 'dayjs';
 
 // Composant Modal personnalisé pour les alertes et confirmations
 const CustomModal = ({ message, type, onConfirm, onClose }) => {
